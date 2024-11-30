@@ -6,7 +6,7 @@
 			</div>
 			<image src="/static/banner.png" mode=""></image>
 		</view>
-		<view class="flexBox" style="margin-top: -100rpx;">
+		<view class="flexBox" style="margin-top: -40rpx;">
 			<view class="box">
 				<image src="/static/index_box1.png" mode=""></image>
 				<view style="flex: 1;height: 100%;">

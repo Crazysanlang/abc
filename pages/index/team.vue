@@ -6,7 +6,7 @@
 			</div>
 			<image src="/static/team.png" mode=""></image>
 		</view>
-		<view class="flexBox" style="margin-top: -100rpx;">
+		<view class="flexBox" style="margin-top: -40rpx;">
 			<view class="box">
 				<view class="boxTxt">{{ $t('recommend_number') }}</view>
 				<view class="boxNum">{{ format(pageOb.tui_jian_ren_shu)   }}</view>
