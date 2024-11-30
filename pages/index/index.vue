@@ -9,14 +9,14 @@
 		<view class="flexBox" style="margin-top: -100rpx;">
 			<view class="box">
 				<image src="/static/index_box1.png" mode=""></image>
-				<view style="flex: 1;">
+				<view style="flex: 1;height: 100%;">
 					<view class="boxTxt">{{ $t('personal_power') }}</view>
 					<view class="boxNum">{{ suanli }}</view>
 				</view>
 			</view>
 			<view class="box">
 				<image src="/static/index_box2.png" mode=""></image>
-				<view style="flex: 1;">
+				<view style="flex: 1;height: 100%;">
 					<view class="boxTxt">{{ $t('total_received') }}</view>
 					<view class="boxNum">{{ totalPaid }}</view>
 				</view>
@@ -289,8 +289,8 @@ export default {
 		backdrop-filter: blur(10px);
 
 		image {
-			width: 80rpx;
-			height: 80rpx;
+			width: 70rpx;
+			height: 70rpx;
 			margin-right: 20rpx;
 		}
 
@@ -304,7 +304,7 @@ export default {
 
 		.boxNum {
 			width: 100%;
-			font-weight: 500;
+			// font-weight: 500;
 			font-size: 36rpx;
 			color: #FFFFFF;
 
@@ -355,29 +355,33 @@ export default {
 }
 
 .tikuang {
+	margin:16rpx 30rpx;
 	height: 340rpx;
-	padding-top: 60rpx;
+	box-sizing: border-box;
 	background: rgba(255, 255, 255, 0.08);
 	border-radius: 20rpx;
 	backdrop-filter: blur(10px);
 	padding: 30rpx;
+	padding-top: 60rpx;
+
 	text-align: center;
 
 	.logo {
 		width: 48rpx;
 		height: 48rpx;
-		margin: 20rpx auto;
+		margin: 0 auto;
 	}
 
 	view {
 		color: #ffffff;
-		font-weight: 500;
+		// font-weight: 500;
 		font-size: 48rpx;
 		color: #FFFFFF;
 	}
 
 	button {
-		margin: 40rpx 30rpx;
+		margin: 0 30rpx;
+		margin-top: 40rpx;
 		height: 88rpx;
 		background: rgba(255, 255, 255, 0.1);
 		border-radius: 10rpx;
@@ -406,7 +410,7 @@ export default {
 		.tdTxt {
 			margin: 16rpx 0 30rpx 0;
 			text-align: center;
-			font-weight: 400;
+			// font-weight: 400;
 			font-size: 24rpx;
 			color: #FFFFFF;
 		}
@@ -454,7 +458,7 @@ export default {
 	background-repeat: no-repeat;
 	background-size: contain;
 	padding: 60rpx 0 0 32rpx;
-	font-weight: 600;
+	// font-weight: 600;
 	font-size: 28rpx;
 	color: #FFFFFF;
 
@@ -465,7 +469,7 @@ export default {
 }
 
 .xzqx {
-	font-weight: 400;
+	// font-weight: 400;
 	font-size: 34rpx;
 	color: #ffffff;
 	padding:40rpx 50rpx;

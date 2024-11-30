@@ -177,9 +177,8 @@ export default {
 		::v-deep .uni-select__selector {
 			width: 200rpx;
 			border: none;
-			background-color: rgba(26, 26, 26, .8);
-			border: #FFFFFF solid 1px;
-			border-radius: 5px;
+			background: rgba(255,255,255,0.08);
+			border-radius: 10rpx;
 		}
 
 		.logo {
@@ -287,9 +286,8 @@ export default {
 
 		::v-deep .uni-select__selector {
 			border: none;
-			background-color: rgba(26, 26, 26, .8);
-			border: #FFFFFF solid 1px;
-			border-radius: 5px;
+			background: rgba(255,255,255,0.08);
+			border-radius: 10rpx;
 		}
 
 		image {

@@ -16,7 +16,7 @@
 				<view class="boxNum">{{ format(pageOb.tuan_dui_ji_bie)   }} </view>
 			</view>
 		</view>
-		<view class="flexBox" style="margin-top: 20px;">
+		<view class="flexBox" style="margin-top: 14px;">
 			<view class="box">
 				<view class="boxTxt">{{ $t('team_number') }}</view>
 				<view class="boxNum">{{ format(pageOb.tui_jian_ren_shu)   }}</view>
@@ -43,7 +43,7 @@
 			</view>
 			<view class="tBody">
 				<view class="list" v-for="(item,index) in list" :key="index">
-					<view class="">{{ item.addr || '-' }}</view>
+					<view class="">{{ formatString(item.addr) }}</view>
 					<view class="">{{ item.tui_jian_ren_shu || '-' }}</view>
 					<view class="">{{ item.tuan_dui_ren_shu || '-' }}</view>
 					<view class="">{{ item.tuan_dui_ye_ji || '-' }}</view>
@@ -73,6 +73,12 @@ export default {
 	},
 
 	methods: {
+		formatString(str) {
+		if (!str) return "-";
+		let str1 = str.substring(0, 4);
+		let str2 = str.substring(str.length - 4, str.length);
+		return str1 + "****" + str2;
+		},
 		format(value){
 			if(value == 'undefined' || value == null || value == ''){
 				return 0;
@@ -176,7 +182,7 @@ export default {
 }
 
 .tdjx {
-	font-weight: 600;
+	// font-weight: 600;
 	font-size: 32rpx;
 	color: #FFFFFF;
 	padding-left: 40rpx;
@@ -218,7 +224,7 @@ export default {
 
 .yqlj {
 	padding-left: 40rpx;
-	font-weight: 600;
+	// font-weight: 600;
 	font-size: 32rpx;
 	color: #FFFFFF;
 	margin-top: 46rpx;
@@ -226,11 +232,12 @@ export default {
 
 .flexBox {
 	// margin-bottom: 40rpx;
-	margin: 0 40rpx;
+	margin: 0 30rpx;
 
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	gap: 14rpx;
 	.box {
 		display: flex;
 		align-content: center;
@@ -240,7 +247,7 @@ export default {
 		text-align: center;
 		width: 338rpx;
 		height: 160rpx;
-	margin: 0 14rpx;
+	// margin: 0 14rpx;
 
 		background: rgba(255,255,255,0.08);
 		border-radius: 20rpx;
@@ -314,7 +321,7 @@ export default {
 
 			text {
 				// vertical-align: middle;
-				font-weight: 600;
+				// font-weight: 600;
 				font-size: 24rpx;
 				color: #C6FE3E;
 			}
