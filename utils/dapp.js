@@ -130,7 +130,8 @@ const stakeABC = async (amount, parent = null) => {
 
 	const tx = await stake.stakeToken(value, pMin, parent)
 	.catch(error =>{
-		return { error: true, msg: error.message }
+		console.log(error.message)
+		return { error: true, msg: '入金失败' }
 	})
 
 	if(tx.error === true){
@@ -152,7 +153,7 @@ const get_total_paid = async () => {
     ]
     const stake = new ethers.Contract(staking_addr, adi_, provider)
     const bal = await stake.totalPaid(account)
-    return ethers.utils.formatEther(bal)
+    return parseFloat((ethers.utils.formatEther(bal)).toFixed(2))
 
 }
 //质押usdt
@@ -199,7 +200,8 @@ const stakeUSDT = async (amount, parent = null) => {
 
 	const tx = await stake.stakeUSDT(value, pMin, parent)
 	.catch(error =>{
-		return { error: true, msg: error.message }
+		console.log(error.message)
+		return { error: true, msg: '入金失败' }
 	})
 
 	if(tx.error === true){
@@ -247,6 +249,12 @@ const joinInNTFT = async () => {
 	const signer = provider.getSigner()
 
 	const token = new ethers.Contract(USDT, IWEB, signer)
+	
+	const bal = await token.balanceOf(account)
+	if(bal.gt('30000000000000000000000')){
+		return  { error: true, msg: "Insufficient balance" }
+	}
+	
 	const allowance = await token.allowance(account, SHEQU)
 
 	if (allowance.lt('30000000000000000000000')) {
@@ -268,7 +276,7 @@ const get_suan_li = async () => {
 	if (typeof account !== 'string') return account
 	const stake = new ethers.Contract(staking_addr, IStaking, provider)
 	const bal = await stake.balanceOf(account)
-	return ethers.utils.formatEther(bal)
+	return parseFloat((ethers.utils.formatEther(bal)).toFixed(2))
 
 }
 
@@ -280,7 +288,7 @@ const get_reward_amount = async () => {
 	if (typeof account !== 'string') return account
 	const stake = new ethers.Contract(staking_addr, IStaking, provider)
 	const bal = await stake.earned(account)
-	return ethers.utils.formatEther(bal)
+	return parseFloat((ethers.utils.formatEther(bal)).toFixed(2))
 
 }
 
