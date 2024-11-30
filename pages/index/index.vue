@@ -204,6 +204,10 @@ export default {
 				uni.showToast({ title: res.msg, icon: 'error',  })
 			}else{
 				  this.$refs.popup.open()
+				  
+				  const res = await get_suan_li()
+				  this.suanli = res
+				  
 			}
 		},
 		handleConfirm() {

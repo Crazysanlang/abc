@@ -153,7 +153,7 @@ const get_total_paid = async () => {
     ]
     const stake = new ethers.Contract(staking_addr, adi_, provider)
     const bal = await stake.totalPaid(account)
-    return parseFloat((ethers.utils.formatEther(bal)).toFixed(2))
+    return parseFloat((Number(ethers.utils.formatEther(bal))).toFixed(2))
 
 }
 //质押usdt
@@ -276,7 +276,7 @@ const get_suan_li = async () => {
 	if (typeof account !== 'string') return account
 	const stake = new ethers.Contract(staking_addr, IStaking, provider)
 	const bal = await stake.balanceOf(account)
-	return parseFloat((ethers.utils.formatEther(bal)).toFixed(2))
+	return parseFloat(Number((ethers.utils.formatEther(bal))).toFixed(2))
 
 }
 
@@ -288,7 +288,7 @@ const get_reward_amount = async () => {
 	if (typeof account !== 'string') return account
 	const stake = new ethers.Contract(staking_addr, IStaking, provider)
 	const bal = await stake.earned(account)
-	return parseFloat((ethers.utils.formatEther(bal)).toFixed(2))
+	return parseFloat(Number((ethers.utils.formatEther(bal))).toFixed(2))
 
 }
 
