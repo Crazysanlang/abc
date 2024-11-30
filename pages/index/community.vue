@@ -12,14 +12,14 @@
 			<view class="bg">
 				<image src="/static/bg.png" mode=""></image>
 			</view>
-			<view class="btn">{{ $t('upgrade_community') }}</view>
+			<view class="btn" @click="handleJoin">{{ $t('upgrade_community') }}</view>
 		</view>
 	</view>
 </template>
 
 <script>
 	import CommonHeader from './commonHeader.vue'
-	import { isSHequ } from '../../utils/dapp.js'
+	import { isSHequ, joinInNTFT } from '../../utils/dapp.js'
 	export default {
 		components:{CommonHeader},
 		data() {
@@ -31,6 +31,19 @@
 			this.isSHequ = await isSHequ()
 		},
 		methods:{
+			async handleJoin(){
+				try {
+					await joinInNTFT()
+					this.isSHequ = await isSHequ()
+					uni.showToast({
+						title: this.$t('success'),
+						icon: 'success',
+						mask: true
+					})
+				} catch (e) {
+					console.log(e)
+				}
+			},
 			toDetail(){
 				uni.navigateTo({
 					url: '/pages/index/communityDetail'
