@@ -106,6 +106,7 @@ export default {
 		this.getInviteCode();
 		this.handleGetSuanLi()
 		this.handleGetRewardAmount()
+		this.handleGetTotalPaid()
 	},
 
 	methods: {
@@ -137,7 +138,7 @@ export default {
 				console.log(error)
 			}
 		},
-		async get_total_paid() {
+		async handleGetTotalPaid() {
 			try {
 				const res = await get_total_paid()
 				this.totalPaid = res
@@ -458,9 +459,9 @@ export default {
 	background-size: contain;
 	padding: 60rpx 0 0 32rpx;
 	// font-weight: 600;
-	font-size: 28rpx;
+	font-size: 24rpx;
 	color: #FFFFFF;
-
+	line-height: 40rpx;
 	image {
 		width: 100%;
 		height: 100%;
