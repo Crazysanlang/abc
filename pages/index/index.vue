@@ -220,6 +220,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.content{
+	width: 100vw;
+	overflow-x: hidden;
+}
 .arrow {
 	width: 28rpx;
 	height: 28rpx;

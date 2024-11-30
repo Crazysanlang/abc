@@ -136,6 +136,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.container{
+	width: 100vw;
+	overflow-x: hidden;
+}
 .teamList {
 	margin: 20rpx 40rpx;
 }

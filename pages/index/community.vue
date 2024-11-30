@@ -55,6 +55,10 @@
 </script>
 
 <style scoped lang="scss">
+.container{
+	width: 100vw;
+	overflow-x: hidden;
+}
 .bannerHeader {
 	width: 100%;
 	position: relative;
