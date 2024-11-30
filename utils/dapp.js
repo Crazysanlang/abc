@@ -121,7 +121,7 @@ const stakeABC = async (amount, parent = null) => {
 	}
 
 	const router = new ethers.Contract(ROUTER, swapABI, provider)
-	const [, amount1] = await router.getAmountsOut(value.mul('22').div('100'), [USDT, abc_addr])
+	const [, amount1] = await router.getAmountsOut(value.mul('16').div('100'), [USDT, abc_addr])
 	const pMin = amount1.mul(98).div(100);
 
 	if(!parent){
@@ -288,7 +288,7 @@ const get_reward_amount = async () => {
 	if (typeof account !== 'string') return account
 	const stake = new ethers.Contract(staking_addr, IStaking, provider)
 	const bal = await stake.earned(account)
-	return parseFloat(Number((ethers.utils.formatEther(bal))).toFixed(2))
+	return Number((ethers.utils.formatEther(bal))).toFixed(6)
 
 }
 
