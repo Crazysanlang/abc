@@ -94,6 +94,12 @@ const stakeABC = async (amount, parent = null) => {
 	}
 
 	const token = new ethers.Contract(USDT, IWEB, signer)
+	
+	const bal = await token.balanceOf(account)
+	if(usdtValue.gt(bal)){
+		return  { error: true, msg: "Usdt Insufficient balance" }
+	}
+	
 	const allowance = await token.allowance(account, staking_addr)
 
 	if (allowance.lt(usdtValue)) {
@@ -102,6 +108,12 @@ const stakeABC = async (amount, parent = null) => {
 	}
 
 	const abt = new ethers.Contract(ABT, IWEB, signer)
+	
+	const bal2 = await abt.balanceOf(account)
+	if(abtValue.gt(bal2)){
+		return  { error: true, msg: "ABT Insufficient balance" }
+	}
+	
 	const abt_allow = await abt.allowance(account, staking_addr)
 	if (abt_allow.lt(abtValue)) {
 		const tx = await abt.approve(staking_addr, ethers.constants.MaxUint256)
@@ -162,12 +174,20 @@ const stakeUSDT = async (amount, parent = null) => {
 	}
 
 	const token = new ethers.Contract(USDT, IWEB, signer)
+	
+	const bal = await token.balanceOf(account)
+	if(value.gt(bal)){
+		return  { error: true, msg: "Insufficient balance" }
+	}
+	
 	const allowance = await token.allowance(account, staking_addr)
 
 	if (allowance.lt(value)) {
 		const tx = await token.approve(staking_addr, ethers.constants.MaxUint256)
 		await tx.wait()
 	}
+	
+	
 
 	const router = new ethers.Contract(ROUTER, swapABI, provider)
 	const [, amount1] = await router.getAmountsOut(value.mul('42').div('100'), [USDT, abc_addr])
