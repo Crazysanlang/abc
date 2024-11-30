@@ -44,9 +44,9 @@
 			<view class="tBody">
 				<view class="list" v-for="(item,index) in list" :key="index">
 					<view class="">{{ item.addr || '-' }}</view>
-					<view class="">{{ item.l1Count || '-' }}</view>
-					<view class="">{{ item.teamCount || '-' }}</view>
-					<view class="">{{ item.l1Yeji || '-' }}</view>
+					<view class="">{{ item.tui_jian_ren_shu || '-' }}</view>
+					<view class="">{{ item.tuan_dui_ren_shu || '-' }}</view>
+					<view class="">{{ item.tuan_dui_ye_ji || '-' }}</view>
 				</view>
 				
 			</view>
