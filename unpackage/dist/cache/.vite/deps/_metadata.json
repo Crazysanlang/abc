@@ -1,13 +1,13 @@
 {
-  "hash": "b233f2ce",
-  "configHash": "86736725",
+  "hash": "c38cc116",
+  "configHash": "7330067e",
   "lockfileHash": "0152bd50",
-  "browserHash": "d711cf26",
+  "browserHash": "ed13c9de",
   "optimized": {
     "ethers": {
       "src": "../../../../../node_modules/ethers/lib.esm/index.js",
       "file": "ethers.js",
-      "fileHash": "f39c4d0a",
+      "fileHash": "f6692421",
       "needsInterop": false
     }
   },

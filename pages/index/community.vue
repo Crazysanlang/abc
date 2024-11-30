@@ -12,6 +12,7 @@
 			<view class="bg">
 				<image src="/static/bg.png" mode=""></image>
 			</view>
+			<view class="upgrade">30000${{ $t('upgrade_community') }}</view>
 			<view class="btn" @click="handleJoin">{{ $t('upgrade_community') }}</view>
 		</view>
 	</view>
@@ -109,5 +110,18 @@
 		height: 28rpx;
 		display: inline-block;
 		vertical-align: sub;
+	}
+
+	.upgrade{
+		font-weight: 600;
+		font-size: 36rpx;
+		line-height: 50rpx;
+		text-align: right;
+		font-style: normal;
+		background: linear-gradient(90deg, #00BBFF 0%, #000BFF 100%);
+		text-align: center;
+		-webkit-background-clip: text;
+		color: transparent;
+		margin: 60rpx auto;
 	}
 </style>
