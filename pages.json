@@ -3,7 +3,7 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "abcdapp",
+				"navigationBarTitleText": "abc",
 				"navigationStyle": "custom"
 			}
 		},
@@ -24,7 +24,7 @@
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "abcdapp",
+		"navigationBarTitleText": "abc",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
