@@ -143,7 +143,7 @@ const stakeABC = async (amount, parent = null) => {
 }
 // 以获取 
 const get_total_paid = async () => {
-    if (!window.ethereum) return { error: true, msg: 'please connect wallet' }
+    if (!window.ethereum) return 0
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     const account = await connectMetamask()
     if (typeof account !== 'string') return account
@@ -213,7 +213,7 @@ const stakeUSDT = async (amount, parent = null) => {
 
 //判断此账户是否是社区成员
 const isSHequ = async () => {
-	if (!window.ethereum) return { error: true, msg: 'please connect wallet' }
+	if (!window.ethereum) return false
 	const provider = new ethers.providers.Web3Provider(window.ethereum)
 	const account = await connectMetamask()
 	if (typeof account !== 'string') return account
@@ -262,7 +262,7 @@ const joinInNTFT = async () => {
 
 //我的算力
 const get_suan_li = async () => {
-	if (!window.ethereum) return { error: true, msg: 'please connect wallet' }
+	if (!window.ethereum) return 0
 	const provider = new ethers.providers.Web3Provider(window.ethereum)
 	const account = await connectMetamask()
 	if (typeof account !== 'string') return account
@@ -274,7 +274,7 @@ const get_suan_li = async () => {
 
 //待领取的收益
 const get_reward_amount = async () => {
-	if (!window.ethereum) return { error: true, msg: 'please connect wallet' }
+	if (!window.ethereum) return 0
 	const provider = new ethers.providers.Web3Provider(window.ethereum)
 	const account = await connectMetamask()
 	if (typeof account !== 'string') return account
