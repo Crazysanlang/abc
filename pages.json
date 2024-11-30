@@ -1,0 +1,32 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "abtdapp",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index/team",
+			"style": {
+				"navigationBarTitleText": "我的团队",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index/community",
+			"style": {
+				"navigationBarTitleText": "我的社区",
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}

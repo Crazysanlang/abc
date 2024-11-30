@@ -1,0 +1,7 @@
+{
+    "i18n-ally.localesPaths": [
+        "locale",
+        "uni_modules/uni-load-more/components/uni-load-more/i18n",
+        "uni_modules/uni-popup/components/uni-popup/i18n"
+    ]
+}
