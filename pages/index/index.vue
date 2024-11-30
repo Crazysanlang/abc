@@ -246,7 +246,7 @@ export default {
 
 .banner {
 	width: 100%;
-	height: 480rpx;
+	height: 430rpx;
 	background-color: #FFFFFF;
 	position: relative;
 
@@ -298,7 +298,7 @@ export default {
 			width: 100%;
 			font-weight: 400;
 			font-size: 22rpx;
-			color: rgba(255, 255, 255, 0.5);
+			color: rgba(255, 255, 255, 1);
 			margin-bottom: 8rpx;
 		}
 
@@ -306,8 +306,7 @@ export default {
 			width: 100%;
 			// font-weight: 500;
 			font-size: 36rpx;
-			color: #FFFFFF;
-
+			color: #008EFF;
 			text {
 				font-size: 24rpx;
 			}
