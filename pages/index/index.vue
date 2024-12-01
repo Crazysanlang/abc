@@ -470,6 +470,10 @@ export default {
 	font-size: 24rpx;
 	color: #FFFFFF;
 	line-height: 40rpx;
+	view{
+		width: 60%;
+		word-break: break-all;
+	}
 	image {
 		width: 100%;
 		height: 100%;
