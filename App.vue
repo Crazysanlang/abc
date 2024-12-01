@@ -19,6 +19,7 @@
 	/*每个页面公共css */
 	page{
 		background: #040404;
+		font-family:PingFangSC, DINPro,Arial, Helvetica, sans-serif;
 	}
 	.btn{
 		margin: 0 50rpx;
