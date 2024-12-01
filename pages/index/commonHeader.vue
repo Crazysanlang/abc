@@ -177,7 +177,8 @@ export default {
 		::v-deep .uni-select__selector {
 			width: 200rpx;
 			border: none;
-			border-radius: 10rpx;
+			overflow: hidden;
+			border-radius: 20rpx;
 			backdrop-filter: blur(10px);
 			// background: rgba(255,255,255,0.08);
 			background: transparent;
@@ -295,7 +296,8 @@ export default {
 
 		::v-deep .uni-select__selector {
 			border: none;
-			border-radius: 10rpx;
+			overflow: hidden;
+			border-radius: 20rpx;
 			backdrop-filter: blur(10px);
 			// background: rgba(255,255,255,0.08);
 			background: transparent;

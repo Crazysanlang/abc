@@ -387,7 +387,7 @@ export default {
 	button {
 		padding: 0;
 		margin: 0;
-		margin: 0 30rpx;
+		// margin: 0 30rpx;
 		margin-top: 40rpx;
 		height: 88rpx;
 		background: rgba(255, 255, 255, 0.1);
