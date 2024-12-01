@@ -214,6 +214,9 @@ export default {
 		color: rgba(255,255,255,0.75);
 		width: 80%;
 		word-break: break-all;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 	.copy {

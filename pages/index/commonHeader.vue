@@ -177,8 +177,17 @@ export default {
 		::v-deep .uni-select__selector {
 			width: 200rpx;
 			border: none;
-			background: rgba(255,255,255,0.08);
 			border-radius: 10rpx;
+			backdrop-filter: blur(10px);
+			// background: rgba(255,255,255,0.08);
+			background: transparent;
+			.uni-scroll-view{
+				background: rgba(0,0,0,0.3);
+				backdrop-filter: blur(10px);
+			}
+			.uni-popper__arrow_bottom {
+				opacity: 0;
+			}
 		}
 
 		.logo {
@@ -257,10 +266,10 @@ export default {
 			background: #1A1A1A;
 			border-radius: 5px;
 			left: -126rpx;
-
 			.uni-popper__arrow_bottom {
 				right: 14%;
 				left: auto;
+				opacity: 0;
 			}
 		}
 
@@ -286,8 +295,20 @@ export default {
 
 		::v-deep .uni-select__selector {
 			border: none;
-			background: rgba(255,255,255,0.08);
 			border-radius: 10rpx;
+			backdrop-filter: blur(10px);
+			// background: rgba(255,255,255,0.08);
+			background: transparent;
+			.uni-scroll-view{
+				background: rgba(0,0,0,0.3);
+				backdrop-filter: blur(10px);
+			}
+			.uni-select__selector-item{
+				color: #FFFFFF;
+			}
+			.uni-popper__arrow_bottom {
+				opacity: 0;
+			}
 		}
 
 		image {

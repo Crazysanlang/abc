@@ -385,6 +385,8 @@ export default {
 	}
 
 	button {
+		padding: 0;
+		margin: 0;
 		margin: 0 30rpx;
 		margin-top: 40rpx;
 		height: 88rpx;
@@ -394,6 +396,7 @@ export default {
 		font-size: 28rpx;
 		line-height: 88rpx;
 		color: #FFFFFF;
+		text-align: center;
 	}
 }
 
