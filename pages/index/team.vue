@@ -16,7 +16,7 @@
 				<view class="boxNum">{{ format(pageOb.tuan_dui_ji_bie)   }} </view>
 			</view>
 		</view>
-		<view class="flexBox" style="margin-top: 14px;">
+		<view class="flexBox" style="margin-top: 16rpx;">
 			<view class="box">
 				<view class="boxTxt">{{ $t('team_number') }}</view>
 				<view class="boxNum">{{ format(pageOb.tui_jian_ren_shu)   }}</view>
@@ -113,7 +113,6 @@ export default {
 					'content-type': 'application/json'
 				},
 				success: (res) => {
-					console.log("🚀 ~ getList ~ res:", res)
 					this.list = res.data.data.tables
 					this.pageOb = res.data.data
 				}
@@ -126,7 +125,7 @@ export default {
 				data: _this.linkAdress,
 				success: function () {
 					uni.showToast({
-						title: _this.$t('success'),
+						title: _this.$t('copy_success'),
 					});
 				}
 			});
@@ -148,7 +147,8 @@ export default {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	height: 80rpx;
 	view {
 		flex: 1;
 		font-weight: 400;
@@ -166,7 +166,8 @@ export default {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	height: 80rpx;
 	view {
 		flex: 1;
 		font-weight: 400;
@@ -186,7 +187,7 @@ export default {
 }
 
 .tdjx {
-	// font-weight: 600;
+	font-weight: 600;
 	font-size: 32rpx;
 	color: #FFFFFF;
 	padding-left: 40rpx;
@@ -194,12 +195,12 @@ export default {
 }
 
 .invite {
-	margin:0 40rpx;
+	margin:0 30rpx;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0 40rpx;
-	height: 80rpx;
+	padding: 0 20rpx 0 30rpx;
+	min-height: 88rpx;
 	margin-top: 20rpx;
 	background: rgba(255,255,255,0.08);
 	border-radius: 10rpx;
@@ -228,7 +229,7 @@ export default {
 
 .yqlj {
 	padding-left: 40rpx;
-	// font-weight: 600;
+	font-weight: 600;
 	font-size: 32rpx;
 	color: #FFFFFF;
 	margin-top: 46rpx;

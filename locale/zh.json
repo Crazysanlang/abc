@@ -65,5 +65,7 @@
     "total_received": "已收总数量",
     "deposit_channel": "入金通道",
     "10usdt_start": "10USDT起步，上不封顶",
-    "24_hour_constant": "全网24小时恒定产出100枚"
+    "24_hour_constant": "全网24小时恒定产出100枚",
+    "copy_success": "复制成功",
+    "copy_fail": "复制失败"
 }

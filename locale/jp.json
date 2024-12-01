@@ -65,5 +65,7 @@
 "total_received": "受け取った合計数",
 "deposit_channel": "入金チャンネル",
 "10usdt_start": "10USDTからスタート、上限なし",
-"24_hour_constant": "ネットワーク全体で24時間定常に100個生産"
+"24_hour_constant": "ネットワーク全体で24時間定常に100個生産",
+"copy_success": "コピー成功",
+"copy_fail": "コピー失敗",
 }

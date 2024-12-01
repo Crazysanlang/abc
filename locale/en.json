@@ -65,5 +65,7 @@
 "total_received": "Total Quantity Received",
 "deposit_channel": "Deposit Channel",
 "10usdt_start": "Starts at 10 USDT, no upper limit",
-"24_hour_constant": "Consistent production of 100 coins across the network every 24 hours"
+"24_hour_constant": "Consistent production of 100 coins across the network every 24 hours",
+"copy_success": "Copy Success",
+"copy_fail": "Copy Failed"
 }

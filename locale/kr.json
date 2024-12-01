@@ -65,5 +65,7 @@
     "total_received": "수신 총 수량",
     "deposit_channel": "입금 채널",
     "10usdt_start": "10USDT부터 시작하여 상한 없음",
-    "24_hour_constant": "전 네트워크에서 24시간 동안 100개가 일정하게 생산됨"
+    "24_hour_constant": "전 네트워크에서 24시간 동안 100개가 일정하게 생산됨",
+    "copy_success": "복사 성공",
+    "copy_fail": "복사 실패"
 }

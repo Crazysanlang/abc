@@ -12,7 +12,7 @@
 			<view class="bg">
 				<image src="/static/bg.png" mode=""></image>
 			</view>
-			<view class="upgrade">30000${{ $t('upgrade_community') }}</view>
+			<view class="upgrade">$30000{{ $t('upgrade_community') }}</view>
 			<view class="btn" @click="handleJoin">{{ $t('upgrade_community') }}</view>
 		</view>
 	</view>

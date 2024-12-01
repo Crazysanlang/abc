@@ -111,6 +111,7 @@ export default {
 
 	methods: {
 		handleStakeAbc() {
+			// this.$refs.popup.open()
 			this.$refs.popup1.open()
 			this.isAbc=true
 			this.isUsdt=false
@@ -272,7 +273,7 @@ export default {
 
 .flexBox {
 	// margin-bottom: 40rpx;
-	margin: 0 40rpx;
+	margin: 0 30rpx;
 
 	display: flex;
 	align-items: center;
@@ -319,10 +320,10 @@ export default {
 	}
 }
 .dialog1 {
-	width: 520rpx;
-	height: 420rpx;
+	width: 600rpx;
+	height: 370rpx;
 	background: #1E1E1E;
-	border-radius: 40rpx;
+	border-radius: 30rpx;
 	text-align: center;
 }
 .dialog {
@@ -455,7 +456,7 @@ export default {
 
 .bannerBottom {
 	margin: 0 auto;
-	width: 600rpx;
+	// width: 600rpx;
 	height: 200rpx;
 	background-image: url('../../static/banner_bottom.png');
 	background-position: center center;
@@ -474,9 +475,9 @@ export default {
 
 .xzqx {
 	// font-weight: 400;
-	font-size: 34rpx;
+	font-size: 32rpx;
 	color: #ffffff;
-	padding:40rpx 50rpx;
+	padding:40rpx 0rpx;
 }
 
 .inputBox {
@@ -486,7 +487,7 @@ export default {
 	border-radius: 10rpx;
 	border: 1rpx solid #FFFFFF;
 	// opacity: 0.2;
-	height: 70rpx;
+	height: 88rpx;
 	padding: 0 20rpx;
 	display: flex;
 	align-items: center;
@@ -494,7 +495,8 @@ export default {
 
 	input {
 		flex: 1;
-		color: #C6FE3E;
+		color: #FFFFFF;
+		font-size: 28rpx;
 	}
 
 	image {
