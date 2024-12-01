@@ -78,7 +78,7 @@ export default {
 	},
 	mounted() {
 		this.setPage()
-		this.address = getApp().globalData.address
+		this.handleLink()
 	},
 	methods: {
 		setPage(){
