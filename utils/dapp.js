@@ -21,6 +21,7 @@ const IStaking = [
 	'function symbol() external view returns (string memory)',
 
     "function earned(address _account) external view returns (uint256)",
+	"function canget(address _account) external view returns (uint256 _amount_can)",
 	"function stage() external view returns (uint256)",
     "function rewardPerToken() external view returns (uint256)",
     "function rewardPerTokenStored() external view returns (uint256)",
@@ -288,7 +289,7 @@ const get_reward_amount = async () => {
 	const account = await connectMetamask()
 	if (typeof account !== 'string') return account
 	const stake = new ethers.Contract(staking_addr, IStaking, provider)
-	const bal = await stake.earned(account)
+	const bal = await stake.canget(account)
 	return Number((ethers.utils.formatEther(bal))).toFixed(6)
 
 }
